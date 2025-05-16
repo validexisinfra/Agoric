@@ -54,7 +54,7 @@ yarn install && yarn build
 
 agd config chain-id agoric-3
 agd config keyring-backend file
-agd config node tcp://localhost:${CUSTOM_PORT}57
+agd config node tcp://localhost:${CUSTOM_PORT}657
 agd init "$MONIKER" --chain-id agoric-3
 
 curl -Ls https://snapshots.kjnodes.com/agoric/genesis.json > $HOME/.agoric/config/genesis.json
@@ -73,19 +73,19 @@ sed -i.bak \
 
 sed -i.bak -e 's|^iavl-disable-fastnode *=.*|iavl-disable-fastnode = true|' $HOME/.agoric/config/app.toml
 
-sed -i.bak -e "s%:26658%:${CUSTOM_PORT}58%g;
-s%:26657%:${CUSTOM_PORT}57%g;
-s%:26656%:${CUSTOM_PORT}56%g;
-s%:6060%:${CUSTOM_PORT}60%g;
+sed -i.bak -e "s%:26658%:${CUSTOM_PORT}658%g;
+s%:26657%:${CUSTOM_PORT}657%g;
+s%:26656%:${CUSTOM_PORT}656%g;
+s%:6060%:${CUSTOM_PORT}060%g;
 s%^external_address = \"\"%external_address = \"$(wget -qO- eth0.me):${CUSTOM_PORT}56\"%;
-s%:26660%:${CUSTOM_PORT}66%g" $HOME/.agoric/config/config.toml
+s%:26660%:${CUSTOM_PORT}660%g" $HOME/.agoric/config/config.toml
 
 sed -i.bak -e "s%:1317%:${CUSTOM_PORT}17%g;
-s%:8080%:${CUSTOM_PORT}80%g;
-s%:9090%:${CUSTOM_PORT}90%g;
-s%:9091%:${CUSTOM_PORT}91%g;
-s%:8545%:${CUSTOM_PORT}45%g;
-s%:8546%:${CUSTOM_PORT}46%g" $HOME/.agoric/config/app.toml
+s%:8080%:${CUSTOM_PORT}080%g;
+s%:9090%:${CUSTOM_PORT}090%g;
+s%:9091%:${CUSTOM_PORT}091%g;
+s%:8545%:${CUSTOM_PORT}545%g;
+s%:8546%:${CUSTOM_PORT}546%g" $HOME/.agoric/config/app.toml
 
 sudo tee /etc/systemd/system/agoricd.service > /dev/null <<EOF
 [Unit]
