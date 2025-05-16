@@ -106,8 +106,8 @@ WantedBy=multi-user.target
 EOF
 
 # Download and extract snapshot
-#print "Downloading chain snapshot..."
-#curl -L https://snapshots.kjnodes.com/agoric/snapshot_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.agoric
+print "Downloading chain snapshot..."
+curl -o - -L https://snapshots.polkachu.com/snapshots/agoric/agoric_19673131.tar.lz4 | lz4 -c -d - | tar -x -C $HOME/.agoric
 
 # Start the node
 print "Enabling and starting agoricd service..."
