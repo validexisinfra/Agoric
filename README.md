@@ -21,3 +21,13 @@ Update your agd binary and restart the systemd service safely.
 ~~~bash
 source <(curl -s https://raw.githubusercontent.com/validexisinfra/Agoric/main/upgrademain.sh)
 ~~~
+
+---
+
+### 🧰 Useful Commands
+
+| Task              | Command                           |
+|-------------------|------------------------------------|
+| View logs         | `journalctl -u agoricd -f -o cat` |
+| Check status      | `systemctl status agoricd`        |
+| Restart service   | `systemctl restart agoricd`       |
