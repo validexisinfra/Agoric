@@ -26,9 +26,9 @@ source <(curl -s https://raw.githubusercontent.com/validexisinfra/Agoric/main/up
 
 ### 🧰 Useful Commands
 
-| Task              | Command                           |
-|-------------------|------------------------------------|
-| View logs         | `journalctl -u agoricd -f -o cat` |
-| Check status      | `systemctl status agoricd`        |
-| Restart service   | `systemctl restart agoricd`       |
-| Get sync info     | `agd status 2>&1 | jq .SyncInfo`  |
+| Task            | Command                                 |
+|-----------------|------------------------------------------|
+| View logs       | `journalctl -u agoricd -f -o cat`        |
+| Check status    | `systemctl status agoricd`              |
+| Restart service | `systemctl restart agoricd`             |
+| Get sync info   | `agd status 2>&1 | jq .SyncInfo`        |
