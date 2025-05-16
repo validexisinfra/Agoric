@@ -26,6 +26,8 @@ source <(curl -s https://raw.githubusercontent.com/validexisinfra/Agoric/main/up
 
 ### 🧰 Useful Commands
 
+### 🧰 Useful Commands
+
 | Task            | Command                                 |
 |-----------------|------------------------------------------|
 | View logs       | `journalctl -u agoricd -f -o cat`        |
