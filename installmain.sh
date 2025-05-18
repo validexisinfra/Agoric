@@ -80,7 +80,7 @@ s%:6060%:${CUSTOM_PORT}060%g;
 s%^external_address = \"\"%external_address = \"$(wget -qO- eth0.me):${CUSTOM_PORT}56\"%;
 s%:26660%:${CUSTOM_PORT}660%g" $HOME/.agoric/config/config.toml
 
-sed -i.bak -e "s%:1317%:${CUSTOM_PORT}17%g;
+sed -i.bak -e "s%:1317%:${CUSTOM_PORT}317%g;
 s%:8080%:${CUSTOM_PORT}080%g;
 s%:9090%:${CUSTOM_PORT}090%g;
 s%:9091%:${CUSTOM_PORT}091%g;
