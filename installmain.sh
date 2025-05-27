@@ -43,10 +43,10 @@ echo "export PATH=$PATH:/usr/local/go/bin:/usr/local/bin:$HOME/go/bin" >> $HOME/
 source $HOME/.bash_profile
 
 cd $HOME
-rm -rf agoric-upgrade-19
-git clone https://github.com/Agoric/agoric-sdk.git agoric-upgrade-19
-cd agoric-upgrade-19
-git checkout agoric-upgrade-19
+rm -rf agoric-upgrade-20
+git clone https://github.com/Agoric/agoric-sdk.git agoric-upgrade-20
+cd agoric-upgrade-20
+git checkout agoric-upgrade-20
 
 print "Installing JavaScript dependencies and building..."
 yarn install && yarn build
