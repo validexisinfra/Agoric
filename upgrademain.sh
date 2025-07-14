@@ -1,9 +1,9 @@
 #!/bin/bash
 cd $HOME
-rm -rf agoric-upgrade-19
-git clone https://github.com/Agoric/agoric-sdk.git agoric-upgrade-20
-cd agoric-upgrade-20
-git checkout agoric-upgrade-20
+rm -rf agoric-upgrade-21
+git clone https://github.com/Agoric/agoric-sdk.git agoric-upgrade-21
+cd agoric-upgrade-21
+git checkout agoric-upgrade-21
 ​
 yarn install && yarn build
 (cd packages/cosmic-swingset && make)
